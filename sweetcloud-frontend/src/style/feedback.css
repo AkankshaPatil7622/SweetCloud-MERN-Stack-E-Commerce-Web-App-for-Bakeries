@@ -1,0 +1,86 @@
+/* .feedback {
+    height: 80vh;
+    width: 100%;
+    background-image: url('../assets/images/c1.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background: rgba(0, 0, 0, 0.3);
+} */
+
+
+@font-face {
+    font-family: 'sweetfont';
+    src: url('../assets/fonts/DancingScript-VariableFont_wght.ttf')format('truetype');
+
+}
+
+
+.feedback {
+  position: relative;
+  height: 80vh;
+  width: 100%;
+  background-image: url('../assets/images/c1.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* semi-dark transparent layer */
+.feedback::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.8); /* 0.4 = slightly dark; adjust as needed */
+  z-index: 0;
+}
+
+/* Your card or text stays clear and visible */
+.feedback-card {
+  position: relative;
+  z-index: 1;
+  background: transparent;
+  height: 400px;
+  width: 250px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(253, 159, 180, 0.904);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
+  text-align: center;
+  margin: 20px;
+  color: white;
+  padding: 18px;
+  overflow: hidden;
+ position: relative;
+}
+.feedback-card h5{
+    font-size: 1.3rem;
+    font-family: 'sweetfont';
+}
+
+.feedback-card p{
+    font-size: 0.9rem;
+}
+.feedbackppl {
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    margin-top: 10px;
+}
+
+.star{
+    position: absolute;
+    bottom: 0;
+}
+
+.starIcon {
+    color: gold;
+    text-shadow: 0 0 8px rgba(241, 226, 5, 0.938); /* glowing effect */
+    margin: 10px;
+}

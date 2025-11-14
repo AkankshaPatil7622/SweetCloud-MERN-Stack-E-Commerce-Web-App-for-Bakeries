@@ -1,0 +1,67 @@
+.sweetcloud-footer {
+  background-color: #d81159;
+  padding: 40px 20px;
+  text-align: left;
+  margin-bottom: 0;
+  width: 100%;
+  position: sticky;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+}
+
+.footer-title {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.footer-section h4 {
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 8px;
+}
+
+.footer-section ul li a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+  color: #ffd6e0;
+}
+
+.footer-section p {
+  margin: 6px 0;
+}
+
+.social-links a {
+  display: inline-block;
+  margin-right: 12px;
+  color: #fff;
+  font-size: 1.2rem;
+  transition: transform 0.3s;
+}
+
+.social-links a:hover {
+  transform: scale(1.2);
+  color: #ffd6e0;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 0.9rem;
+}

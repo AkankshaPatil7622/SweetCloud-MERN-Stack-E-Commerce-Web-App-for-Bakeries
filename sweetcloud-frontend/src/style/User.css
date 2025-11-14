@@ -1,0 +1,259 @@
+@font-face {
+    font-family: 'sweetfont';
+    src: url('../assets/fonts/DancingScript-VariableFont_wght.ttf')format('truetype');
+
+}
+
+
+
+/* Outer container */
+.cake-scroll-container {
+  width: 100%;
+  padding: 20px 30px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+}
+
+/* Inner flex box */
+.cake-scroll-inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap; /* ✅ allows new line when space runs out */
+  gap: 3rem;
+  width: 100%;
+}
+
+/* Cake image style */
+.cakeImg {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+ /* border-radius: 40% 5% 40% 5%; */
+  object-fit: cover;
+  flex-shrink: 0;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect */
+.cakeImg:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Tablet view */
+@media (max-width: 992px) {
+  .cakeImg {
+    width: 90px;
+    height: 90px;
+  }
+}
+
+/* Mobile view */
+@media (max-width: 600px) {
+  .cake-scroll-container {
+    padding: 15px 20px;
+  }
+  .cakeImg {
+    width: 75px;
+    height: 75px;
+  }
+}
+
+/* .heroImg {
+    object-fit: cover;
+    width: 100%;
+   height: 100%;
+   filter: brightness(70%);
+} */
+
+.hero-container {
+  position: relative;
+  width: 100%;
+  height: 70vh;
+  overflow: hidden;
+}
+
+.heroImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(70%); /* Darkens image so text is readable */
+}
+
+/* Floating text styling */
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  text-align: center;
+  animation: floatText 3s ease-in-out infinite;
+}
+
+.hero-text h1 {
+  font-size: 6rem;
+  font-weight: 900;
+  letter-spacing: 1px;
+  font-family: 'sweetfont';
+}
+
+.hero-text p {
+  font-size: 1.8rem;
+  margin-top: 10px;
+  font-family: 'sweetfont';
+    letter-spacing: 5px;
+}
+
+/* Floating animation */
+@keyframes floatText {
+  0%, 100% {
+    transform: translate(-50%, -54%);
+  }
+  50% {
+    transform: translate(-50%, -46%);
+  }
+}
+
+/* Responsive text */
+@media (max-width: 768px) {
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+  .hero-text p {
+    font-size: 1rem;
+  }
+}
+
+/* cakes by flavour component styling */
+
+.cake-card {
+  flex: 1 1 250px; /* Allows flexible resizing */
+  max-width: 300px;
+  min-width: 230px;
+  border-radius: 20px;
+  overflow: hidden;
+  background: #ffdee6;
+  transition: all 0.3s ease;
+  text-align: center;
+  margin: 15px;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.6);
+} 
+
+.cake-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0px 10px 25px rgba(216, 17, 89, 0.3);
+}
+
+.cake-image {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  padding: 20px;
+}
+
+.cake-info {
+  padding: 15px;
+}
+
+.cake-name {
+  color: #d81159;
+  font-weight: 600;
+  margin-bottom: 8px;
+  font-size: 1.1rem;
+}
+
+.cake-price {
+  color: #333;
+  font-size: 1rem;
+  margin-bottom: 12px;
+}
+
+.buy-btn {
+  background-color: #d81159;
+  border: none;
+  color: #fff;
+  border-radius: 25px;
+  padding: 10px 22px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  font-weight: 500;
+  margin: 10px;
+}
+
+.buy-btn:hover {
+  background-color: #a90c46;
+}
+
+/* Responsive layout handling */
+.cake-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+/* For tablets */
+@media (max-width: 992px) {
+  .cake-card {
+    max-width: 45%;
+  }
+}
+
+/* For small phones */
+@media (max-width: 576px) {
+  .cake-card {
+    max-width: 90%;
+    margin: 10px auto;
+  }
+
+  .cake-image {
+    height: 180px;
+  }
+
+  .cake-name {
+    font-size: 1rem;
+  }
+}
+
+
+/* order page styling*/
+
+.orderContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background-color:#ffe4ee; */
+  height: 100%;
+}
+.order{
+
+}
+.customize-btn{
+  background-color: #d81159 !important;
+  color: #fff;
+   border: none;
+  border-radius: 25px;
+  padding: 10px 22px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  font-weight: 500;
+  margin: 10px;
+
+}
+
+.customize-btn:hover {
+  background-color: #a90c46;
+}
+
+#cakeImg{
+  height: 10em;
+  width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+  padding: 10px;
+}
